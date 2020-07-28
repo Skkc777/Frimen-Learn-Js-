@@ -48,25 +48,68 @@ const scores = [60, 50, 60, 58, 54, 54,
     46, 31, 57, 52, 44, 18, 23, 43, 31, 24, 65, 342,
     41, 53, 55, 61, 51, 44, 108
 ];
-let highScore = 0;
-let highScoreNumber = [];
-let numberHighSort = [];
+// let highScore = 0;
+// let highScoreNumber = [];
+// let numberHighSort = [];
 
-scores.forEach((item, index) => {
+// scores.forEach((item, index) => {
+//     for (let i = 0; i < scores.length; i++) {
+//         if (scores[i] > highScore) {
+//             highScore = scores[i];
+//             numberHighSort = scores.sort((a, b) => b - a);
+//         }
+//     }
+//     console.log(`Bubble solution #${index}: ${item};`);
+// });
+
+// for (let i = 0; i < scores.length; i++) {
+//     if (scores[i] == highScore) {
+//         highScoreNumber.push(i);
+//     }
+// }
+// console.log(`Количество тестов: ${scores.length}`);
+// console.log(`Max result: ${highScore}`);
+// console.log
+// (
+// `Max result: номер с макс.значением ${numberHighSort.indexOf(numberHighSort[0])}: ${numberHighSort[0]}}`
+// );
+
+
+function scoresRealise(scores) {
+    let highScore = 0;
+    let outputScore;
+
     for (let i = 0; i < scores.length; i++) {
+
+        outputScore = `Мыльныё пузырь №${i}: значение ${scores[i]}`;
+        console.log(outputScore);
         if (scores[i] > highScore) {
             highScore = scores[i];
-            numberHighSort = scores.sort((a, b) => b - a);
         }
     }
-    console.log(`Bubble solution #${index}: ${item};`);
-});
-
-for (let i = 0; i < scores.length; i++) {
-    if (scores[i] == highScore) {
-        highScoreNumber.push(i);
-    }
+    return highScore;
 }
-console.log(`Количество тестов: ${scores.length}`);
-console.log(`Max result: ${highScore}`);
-console.log(`Max result: номера с макс.значением ${highScoreNumber}, ${numberHighSort[0]}`);
+
+function getBest(scores, highScore) {
+    let bestSolution = [];
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] == highScore) {
+            bestSolution.push(i);
+        }
+    }
+    return bestSolution;
+}
+
+
+
+const highScore = scoresRealise(scores);
+const bestSolution = getBest(scores, highScore);
+console.log(`Количество результатов: ${scores.length}`);
+console.log(`Максимальный результат равен: ${highScore}`);
+console.log(`Номер максимального значения равен: ${bestSolution}`);
+
+
+
+
+
+
