@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <title>Just a Generic Page</title>
+
+ </head>
+ <body>
+
+ 	 <script>
+
+
+/*
+    // make a phrase
+
+    function makePhrases() {
+          // body...
+          var words1 = ["Я", "Ты","Мы", "Она", "Они"];
+          var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+          var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+          var rand1 = Math.floor(Math.random() * words1.length);
+          var rand2 = Math.floor(Math.random() * words2.length);
+          var rand3 = Math.floor(Math.random() * words3.length);
+
+          var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+          alert(phrase);
+
+    }
+
+    makePhrases();
+
+
+/* 0;3;2; рандомное значения элементов массива 
+
+вызов функции, просмотр параметров - параметр не задан - выполнение функции - просмотр массивов - выполнение переменной rand 1-3 - выполнение переменной phrase -
+c подставлением элементов массива (Округление к меньшему значению(выполнение рандома от 0 до 0.99 * на длину массива в этом случае 4 элемента)) = Округ(0.27 * 3) 
+= 0.81 применение округления = 0, то есть 24/7;
+var rand2 = 
+var rand3 = 
+
+var phrase = замена длины массива значением элемента массива и получаем:
+24/7 value-added strategy
+
+
+решение через вывод значений 1 и 2 и решение total;
+var firstNumber = prompt("Txt first number:");
+var secondNumber = prompt("txt second number:");
+var total = Number(firstNumber) ** Number(secondNumber);
+alert(total);
+*/
+
+
+/* вывод alert для решения степеней
+
+
+
+var firstNumber = prompt("Txt first number:");
+var secondNumber = prompt("Txt second number:");
+var total = Number(firstNumber) ** Number(secondNumber);
+alert(total);
+
+
+
+
+
+var products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+var hasBubbleGum = [false, false, false, true];
+var i = 0;
+
+while (i < hasBubbleGum.length) {
+    if (hasBubbleGum[i]);
+   console.log(products[i] + " contains bubble gum");
+i = i + 1;
+}
+
+
+
+var scores = [20, 30, 24, 45, 34, 65, 12, 28, 50, 21, 68, 90, 44, 56];
+var output;
+var i = 0;
+while (i < scores.length) {
+    output = "Попытка №" + i + " рейтинг: " + scores[i];
+    console.log(output);
+    i = i + 1;
+}
+       
+*/
+/*
+
+
+
+
+var products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+var hasBubbleGum = [false, false, false, true];
+var i = 0;
+
+while (i < hasBubbleGum.length) {
+    if (hasBubbleGum[i]) {
+   console.log(products[i] + " contains bubble gum");
+}
+    i = i + 2;
+}
+
+
+
+var products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+var hasBubbleGum = [false, false, false, true];
+       for (var i = 0; i < hasBubbleGum.length; i = i + 1) {
+        if (hasBubbleGum[i]) {
+            console.log(products[i] + " contains bubble gum");
+        }
+       }
+
+
+*/
+
+var scores = [20, 30, 24, 45, 34, 65, 12, 28, 50, 21, 68, 90, -555, 44, 101, 56, 65, 26, 99, 101];
+var output;
+var highScore = 0;
+
+
+ 
+            for (var i = 0; i < scores.length; i++) {
+            output = "Попытка №" + i + " рейтинг: " + scores[i];
+            console.log(output);
+            
+            if (scores[i] > highScore) {
+                highScore = scores[i];                                          
+             }
+}
+           console.log("Попыток кол-во: " + scores.length);
+           console.log("Максимальный результат: " + highScore);
+           
+
+
+/*
+bestSolution.push("Rockabilly");
+bestSolution.push("Ambient");
+var size = bestSolution.length;
+/* Присвоение индекса массивам может происходить через bestSolution.push("Rockabilly"); и bestSolution.push("Ambient"); где не требуется указывать индекс
+и также bestSolution [0] = "Rockabilly"; & bestSolution [1] = "Ambient"; с присвоенным индексом */
+            
+var bestSolution = [];
+
+            for (var i = 0; i < scores.length; i++) {
+                if (scores[i] == highScore) {
+                    bestSolution.push(i);
+                }
+            }
+            console.log("Лучшие попытка: " + bestSolution);
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+ </body>
+</html>
